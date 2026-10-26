@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat por Voz</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="chatbot">
+        <header class="cabecalho">
+            <h1>🤖 Assistente Virtual 🤖</h1>
+            <p>Digite uma mensagem ou utilize o microfone</p>
+        </header>
+
+        <section id="conversa" class="conversa">
+            <div class="mensagem bot">
+                Olá! Como posso ajudar?
+            </div>
+        </section>
+
+        <!-- Cards de sugestões/palavras-chave posicionados logo acima dos controles -->
+        <section class="cards-sugestoes" id="cardsSugestoes">
+            <button class="card-sugestao" data-mensagem="Olá">👋 Olá</button>
+            <button class="card-sugestao" data-mensagem="Qual o horário de atendimento?">⏰ Horário</button>
+            <button class="card-sugestao" data-mensagem="Quais cursos vocês oferecem?">📚 Cursos</button>
+            <button class="card-sugestao" data-mensagem="Qual o endereço e local?">📍 Localização</button>
+            <button class="card-sugestao" data-mensagem="Muito obrigado!">🙏 Obrigado</button>
+        </section>
+
+        <section class="controles">
+            <input type="text" id="mensagem" placeholder="Digite sua mensagem...">
+            <button id="btnEnviar" title="Enviar Mensagem">Enviar</button>
+            <button id="btnFalar" title="Gravar Áudio">🎙️</button>
+        </section>
+        <p id="status"></p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

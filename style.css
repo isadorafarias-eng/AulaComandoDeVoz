@@ -1,0 +1,234 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #acd7ff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.chatbot{
+    width: 500px;
+    max-width: 100%;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 1px 0px 20px #63a7e7;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecalho{
+    background-color: #0f4081;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1{
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+header p{
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* Área do Chat */
+.conversa{
+    height: 380px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.conversa::-webkit-scrollbar {
+    display: none;
+}
+
+.mensagem{
+    max-width: 80%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    word-wrap: break-word;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.usuario{
+    background-color: #0f4081;
+    color: #fff;
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+}
+
+.bot{
+    background: #c0d9ff;
+    color: #07051d;
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+}
+
+/* Container de Cards Totalmente Responsivos */
+.cards-sugestoes {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards quebrem de linha conforme o espaço */
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background-color: #f0f6ff;
+    border-top: 1px solid #d0e3ff;
+}
+
+.card-sugestao {
+    background-color: #ffffff;
+    color: #0f4081;
+    border: 1px solid #63a7e7;
+    border-radius: 20px;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    flex: 1 1 auto; /* Ajusta o tamanho de cada card de forma fluida */
+    text-align: center;
+}
+
+.card-sugestao:hover {
+    background-color: #0f4081;
+    color: #ffffff;
+    border-color: #0f4081;
+    transform: translateY(-2px);
+}
+
+.controles{
+    padding: 15px;
+    display: flex;
+    gap: 8px;
+    border-top: 1px solid #acd7ff;
+    background-color: #fff;
+}
+
+input{
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid #63a7e7;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+input:focus {
+    border-color: #0f4081;
+}
+
+button{
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #0f4081;
+    color: #fff;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+button:hover{
+    background: #0b3770;
+}
+
+#btnFalar{
+    background-color: #a1aaff;
+    font-size: 1.1rem;
+}
+
+#btnFalar:hover {
+    background-color: #838fff;
+}
+
+#status{
+    text-align: center;
+    min-height: 25px;
+    padding: 5px;
+    color: #3540ac;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* Layout para Dispositivos Móveis */
+@media (max-width: 520px) {
+    body {
+        padding: 5px;
+    }
+
+    .chatbot {
+        border-radius: 12px;
+        box-shadow: 0px 4px 12px rgba(15, 64, 129, 0.15);
+    }
+
+    .cabecalho {
+        padding: 15px 10px;
+    }
+
+    header h1 {
+        font-size: 1.25rem;
+    }
+
+    header p {
+        font-size: 0.85rem;
+    }
+
+    .conversa {
+        height: 300px;
+        padding: 12px;
+    }
+
+    .mensagem {
+        max-width: 88%;
+        font-size: 0.9rem;
+        padding: 10px 12px;
+    }
+
+    /* Responsividade dos Cards em Telas Pequenas */
+    .cards-sugestoes {
+        gap: 6px;
+        padding: 8px 10px;
+    }
+
+    .card-sugestao {
+        padding: 6px 10px;
+        font-size: 0.78rem;
+        flex: 1 1 calc(50% - 6px); /* Distribui em colunas simétricas no mobile */
+    }
+
+    .controles {
+        padding: 10px;
+        gap: 6px;
+    }
+
+    input {
+        padding: 8px 10px;
+        font-size: 0.88rem;
+    }
+
+    button {
+        padding: 8px 10px;
+        font-size: 0.88rem;
+    }
+
+    #btnFalar {
+        padding: 8px 10px;
+    }
+}
